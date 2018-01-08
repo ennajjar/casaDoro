@@ -1,0 +1,29 @@
+.rtl{direction: rtl;}
+
+/* Header */
+.rtl .header-account ul{padding-right: 0; }
+
+.rtl .search-form:after {
+	    right: inherit;
+    left: 50px;
+}
+
+.rtl .search-form .icon {
+       right: inherit;
+    left: 15px;
+}
+.rtl .whishlist{padding-right: 0;}
+.rtl .c-mainCarrosel{direction: ltr;}
+.rtl .owl-carousel.owl-drag .owl-item { direction: rtl;}
+.rtl .owl-carousel{direction: ltr;}
+.rtl .c-showProduct .section-content{direction: ltr;}
+
+
+.rtl .home-section-featured.owl-carousel .owl-nav{
+    left: 0;
+    right: inherit;
+}
+
+.rtl .home-section-featured .rating {
+    float: right;
+}
