@@ -32,4 +32,4 @@
 	//$('.home-section-featured .section-post').index()
 
 	$(".woocommerce .carousel .item:first-child").addClass("active");
-	
+	$(".products li").addClass('product-grid');

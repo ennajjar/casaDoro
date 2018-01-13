@@ -2,10 +2,8 @@
 <html <?php language_attributes(); ?>>
 <?php
 $url_en = pll_home_url('en');
-$url_ar = "#";
+$url_ar =  pll_home_url('ar');
    
- $current_url="https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; 
-//var_dump($current_url);
 ?>
 <head>
 

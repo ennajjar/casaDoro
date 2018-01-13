@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $product;
 
 echo apply_filters( 'woocommerce_loop_add_to_cart_link',
-	sprintf( '<a rel="nofollow" href="%s" data-quantity="%s" data-product_id="%s" data-product_sku="%s" class="%s">%s</a>',
+	sprintf( '<div class="product-hover"> <div class="product-actions"><a rel="nofollow" href="%s" data-quantity="%s" data-product_id="%s" data-product_sku="%s" class="%s awe-button product-add-cart" data-original-title="%s" data-toggle="tooltip"><i class="icon icon-shopping-bag"></i></a></div></div>',
 		esc_url( $product->add_to_cart_url() ),
 		esc_attr( isset( $quantity ) ? $quantity : 1 ),
 		esc_attr( $product->get_id() ),
@@ -32,3 +32,4 @@ echo apply_filters( 'woocommerce_loop_add_to_cart_link',
 		esc_html( $product->add_to_cart_text() )
 	),
 $product );
+

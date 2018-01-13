@@ -1583,11 +1583,11 @@ if ( ! function_exists( 'woocommerce_breadcrumb' ) ) {
 	 */
 	function woocommerce_breadcrumb( $args = array() ) {
 		$args = wp_parse_args( $args, apply_filters( 'woocommerce_breadcrumb_defaults', array(
-			'delimiter'   => '&nbsp;&#47;&nbsp;',
-			'wrap_before' => '<nav class="woocommerce-breadcrumb">',
-			'wrap_after'  => '</nav>',
-			'before'      => '',
-			'after'       => '',
+			'wrap_before' => '<div id="breadcrumb"><div class="container">
+            <ol class="breadcrumb">',
+			'wrap_after'  => '</ol></div></div>',
+			'before'      => '<li>',
+			'after'       => '</li>',
 			'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' ),
 		) ) );
 
