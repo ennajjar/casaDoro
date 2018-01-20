@@ -15,7 +15,7 @@
                     array(
                         'taxonomy' => 'product_cat',
                         'field'    => 'slug',
-                        'terms'    => 'best-seller',
+                        'terms'    => 'best-seller-en',
                         'operator' => 'IN',
                     ),
                 )
@@ -168,7 +168,7 @@
                                                 <h5 class="color-grey"><?php echo get_sub_field('description_slider_HP');?></h5>
 
                                                 <div class="button">
-                                                    <a href="<?php echo get_sub_field('link_view_collection_hp');?>" class="btn btn-lg btn-black btn-outline">View Collection</a>
+                                                    <a href="<?php echo get_sub_field('link_view_collection_hp');?>" class="btn btn-lg btn-black btn-outline"> <?php _e('View Collection','casaDoro');?></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -184,19 +184,23 @@
 
         <!-- BEGIn BEST SELLER -->
         <?php
-            $params = array('posts_per_page' => -1,'numberposts'=>2,'post_type' => 'product',
+
+
+
+            $params = array('post_type' => 'product', 'posts_per_page' => -1, 'order'=> 'DESC',
                 'tax_query' => array(
                     array(
                         'taxonomy' => 'product_cat',
                         'field'    => 'slug',
-                        'terms'    => 'best-seller',
-                        'operator' => 'IN',
+                        'terms'    => 'best-seller-en',
+                        //'operator' => 'IN',
                     ),
                 )
             );
 
 
             $wc_query = new WP_Query($params);
+            // var_dump( $wc_query);
             $posts = $wc_query->posts;
             $count = $wc_query->post_count;
 
@@ -219,7 +223,7 @@
                 <div class="padding-vertical-50">
                     <div class="arrivals pos-r">
                         <div class="section-header">
-                            <h2>Best Seller</h2>
+                            <h2><?php _e('Best Seller','casaDoro');?></h2> 
                         </div><!-- /.section-header -->
 
                         <?php if ($wc_query->have_posts()) : ?>
@@ -352,7 +356,7 @@
                                     <h4><?php the_title(); ?></h4>
                                     <p><?php the_content();?></p>
 
-                                    <a href="./cart/?add-to-cart=<?php echo get_the_ID();?>" class="btn btn-lg btn-primary" >Shop now</a>
+                                    <a href="./cart/?add-to-cart=<?php echo get_the_ID();?>" class="btn btn-lg btn-primary" ><?php _e('Shop now','casaDoro');?></a>
 
                                 </div><!-- /.product-list-actions -->
                             </div>
@@ -403,7 +407,7 @@
             <div class="container">
                 <div class="padding-vertical-60">
                     <div class="section-header">
-                        <h2>Featured Products</h2>
+                        <h2><?php _e('Featured Products','casaDoro');?></h2>
                     </div>
 
         <?php
@@ -412,7 +416,7 @@
                     array(
                         'taxonomy' => 'product_cat',
                         'field'    => 'slug',
-                        'terms'    => 'featured-products',
+                        'terms'    => 'featured-products-en',
                         'operator' => 'IN',
                     ),
                 )
@@ -487,7 +491,7 @@
                             ?>
                             <?php wp_reset_postdata(); ?>
                             <?php else:  ?>
-                            <?php _e( 'No Products' ); ?>
+                            <?php _e('No Products','casaDoro');?>  
 
                         </div>
                     </div>
@@ -504,7 +508,7 @@
         <section class="c__Hp--instagram">
             <div class="section-header center size-30">
                 <span class="icons icons-instag"></span>
-                <h2>Instagram Widget</h2>
+                <h2><?php _e('Instagram Widget','casaDoro');?> </h2>
             </div>
             <div class="widget">
                 <ul class="instagram-widget">
@@ -520,7 +524,7 @@
         <div class="section-brands">
             <div class="section-header center size-30">
                 <i class="icon fa fa-users" ></i>
-                <h2>Our Client</h2>
+                <h2><?php _e('Our Client','casaDoro');?></h2>
             </div>
             <div class="container">
                 <div class="brands-carousel owl-carousel" id="brands-carousel">

@@ -3,7 +3,7 @@
  * Plugin Name: YITH WooCommerce Ajax Product Filter Premium
  * Plugin URI: http://yithemes.com/
  * Description: YITH WooCommerce Ajax Product Filter offers the perfect way to filter all the products of your shop.
- * Version: 3.4.3
+ * Version: 33333.4.3
  * Author: YITHEMES
  * Author URI: http://yithemes.com/
  * Text Domain: yith-woocommerce-ajax-navigation

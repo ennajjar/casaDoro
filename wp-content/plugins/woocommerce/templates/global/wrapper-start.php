@@ -22,6 +22,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $template = get_option( 'template' );
 
+$a=get_the_title(236) ;
+$title = '<div id="main">
+<div class="main-header background background-image-heading-products">
+    <div class="container">
+        <h1>'.$a.'</h1>
+    </div>
+</div>';
 switch ( $template ) {
 	case 'twentyeleven' :
 		echo '<div id="primary"><div id="content" role="main" class="twentyeleven">';
@@ -42,13 +49,6 @@ switch ( $template ) {
 		echo '<div id="primary" class="content-area twentysixteen"><main id="main" class="site-main" role="main">';
 		break;
 	default :
-		echo '<div id="main">
-<div class="main-header background background-image-heading-products">
-    <div class="container">
-        <h1>Products</h1>
-    </div>
-</div>
-<div class="container">
-        <div class="row">';
+		echo $title;
 		break;
 }

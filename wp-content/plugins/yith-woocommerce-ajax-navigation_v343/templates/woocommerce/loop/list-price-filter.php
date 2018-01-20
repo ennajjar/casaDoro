@@ -26,10 +26,11 @@ if( ! empty( $prices ) ) : ?>
                 }
                 ?>
                 <?php $link_class = $is_active ? 'yith-wcan-price-link active' : 'yith-wcan-price-link'; ?>
-                <a class="<?php echo $link_class ?> yith-wcan-price-filter-list-link" href="<?php echo esc_url( add_query_arg( $filter_value, $shop_page_uri ) ) ?>">
-                    <?php echo _x( 'From', 'Price filter option: price starts from', 'yith-woocommerce-ajax-navigation' ) . ': ' . wc_price( $price['min'] ) . ' ' . _x( 'To', 'Price filter option: price ends to', 'yith-woocommerce-ajax-navigation' ) . ': ' . wc_price( $price['max'] );  ?>
+                <a class=" <?php echo $link_class ?> yith-wcan-price-filter-list-link" href="<?php echo esc_url( add_query_arg( $filter_value, $shop_page_uri ) ) ?>">
+                    <?php echo _x( '', 'Price filter option: price starts from', 'yith-woocommerce-ajax-navigation' )  . wc_price( $price['min'] ) . ' ' . _x( '', 'Price filter option: price ends to', 'yith-woocommerce-ajax-navigation' ) . ' - ' . wc_price( $price['max'] );  ?>
                 </a>
             </li>
         <?php endforeach; ?>
     </ul>
 <?php endif; ?>
+

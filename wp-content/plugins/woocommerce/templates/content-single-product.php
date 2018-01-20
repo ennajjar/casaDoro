@@ -37,7 +37,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <div id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
-
+    <div class="container">
 	<?php
 		/**
 		 * woocommerce_before_single_product_summary hook.
@@ -48,7 +48,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		do_action( 'woocommerce_before_single_product_summary' );
 	?>
 
-	<div class="summary entry-summary">
+	<div class="col-md-6 summary entry-summary">
 
 		<?php
 			/**
@@ -78,7 +78,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		 */
 		do_action( 'woocommerce_after_single_product_summary' );
 	?>
-
+</div>
 </div><!-- #product-<?php the_ID(); ?> -->
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>

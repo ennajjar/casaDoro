@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: casa_doro\n"
-"POT-Creation-Date: 2018-01-06 02:17+0000\n"
-"PO-Revision-Date: 2018-01-06 02:17+0000\n"
+"Project-Id-Version: casaDoro\n"
+"POT-Creation-Date: 2018-01-20 22:30+0000\n"
+"PO-Revision-Date: 2018-01-20 22:31+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -13,39 +13,110 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
-"X-Poedit-KeywordsList: _e\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _e\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: assets/js/vendor/jquery-ui.min.js:8
 msgid "'"
 msgstr ""
 
-#: header.php:77
+#: footer.php:49
+msgid "PAYMENT ACCEPT"
+msgstr "قبول الدفع"
+
+#: footer.php:61
+msgid "Copyright &copy; 2018 Casa D Oro - All Rights Reserved."
+msgstr "حقوق الطبع والنشر © عام 2018 Casa Doro - جميع الحقوق محفوظة."
+
+#: footer.php:84
+msgid "Language:"
+msgstr "لغة:"
+
+#: header.php:80
 msgid "Call us"
 msgstr "اتصل بنا"
 
-#: header.php:85
+#: header.php:88
 msgid "Account"
-msgstr "ddd"
+msgstr "الحساب"
 
-#: header.php:107
+#: header.php:110
 msgid "Account Infomation"
-msgstr ""
+msgstr "الحساب"
 
-#: header.php:108
+#: header.php:111
 msgid "Logout"
-msgstr ""
+msgstr "تسجيل الخروج"
 
-#: header.php:117
+#: header.php:120
 msgid "Wishlist"
-msgstr ""
+msgstr "قائمة الأمنيات"
 
-#: header.php:143
+#: header.php:146
 msgid "Language :"
-msgstr "ssssssss"
+msgstr "لغة:"
 
-#: single-product.php:146 templates/tple_home.php:147
-#: templates/tple_home.php:303 templates/tple_home.php:490
+#: header.php:185
+msgid "Search your entry here..."
+msgstr "ترتيب حسب..."
+
+#: single-product.php:14 single-product.php:23
+msgid "Product"
+msgstr "منتج"
+
+#: single-product.php:22 templates/tpe_about.php:22
+#: templates/tpe_account.php:21 templates/tpe_checkout.php:21
+#: templates/tpe_shop.php:157 templates/tpe_shop2.php:19
+#: templates/tpe_wishlist.php:21 templates/tple_cart.php:19
+msgid "Home"
+msgstr "الرئيسية"
+
+#: single-product.php:113
+msgid "Back to Products list"
+msgstr "العودة إلى قائمة المنتجات"
+
+#: single-product.php:182
+msgid "Dimensions (cm)"
+msgstr "الأبعاد"
+
+#: single-product.php:196
+msgid "kg"
+msgstr "كغ"
+
+#: single-product.php:208 single-product.php:214
+msgid "(CM)"
+msgstr "سم"
+
+#: single-product.php:268
+msgid "Related Products"
+msgstr "المنتجات المميزة"
+
+#: templates/tpe_shop.php:138 templates/tple_home.php:147
+#: templates/tple_home.php:307 templates/tple_home.php:494
 msgid "No Products"
-msgstr ""
+msgstr "لا توجد منتجات"
+
+#: templates/tple_home.php:171
+msgid "View Collection"
+msgstr "عرض المجموعة"
+
+#: templates/tple_home.php:226
+msgid "Best Seller"
+msgstr "الأكثر مبيعا"
+
+#: templates/tple_home.php:359
+msgid "Shop now"
+msgstr "تسوق الان"
+
+#: templates/tple_home.php:410
+msgid "Featured Products"
+msgstr "المنتجات المميزة"
+
+#: templates/tple_home.php:511
+msgid "Instagram Widget"
+msgstr "تابعنا على انستاجرام"
+
+#: templates/tple_home.php:527
+msgid "Our Client"
+msgstr "زبوننا"

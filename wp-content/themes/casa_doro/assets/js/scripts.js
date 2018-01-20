@@ -30,6 +30,16 @@
 	$(".woocommerce-billing-fields input").addClass("form-control dark");
 	$(".woocommerce-billing-fields select").addClass("form-control dark");
 	//$('.home-section-featured .section-post').index()
+$('#product-details .product-price').insertBefore("#product-details .cart" );
 
 	$(".woocommerce .carousel .item:first-child").addClass("active");
 	$(".products li").addClass('product-grid');
+
+	$(".yith-wcan-list-price-filter li").click(function() {
+	  $(".yith-wcan-list-price-filter li").removeClass('active');
+	  $(this).addClass('active');
+	});
+	$(".widget_product_prices .orderby li").click(function() {
+	  $(".widget_product_prices .orderby li").removeClass('active');
+	  $(this).addClass('active');
+	});

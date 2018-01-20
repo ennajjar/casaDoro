@@ -3,6 +3,9 @@
 <?php
 $url_en = pll_home_url('en');
 $url_ar =  pll_home_url('ar');
+
+
+//$url_ar =  "#";
    
 ?>
 <head>
@@ -13,6 +16,8 @@ $url_ar =  pll_home_url('ar');
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300,400,400i,700,700i">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
 
     <link rel="icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/favicon.png" type="<?php echo esc_url( get_template_directory_uri() ); ?>/image/x-icon" />
     <link rel="shortcut icon" href="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/favicon.png" type="image/x-icon" />
@@ -73,7 +78,7 @@ $url_ar =  pll_home_url('ar');
             <div class="container">
                 <div class="text-left">
                     <p><?php _e('Call us','casaDoro');?> : <span class="color">00 (971) 508-587-329</span></p>
-                    <p><a href="mailto:#" title="contact@casadoro.com">contact@casadoro.com</a></p>
+                    <p><a href="mailto:contact@casadoro.com" title="contact@casadoro.com">contact@casadoro.com</a></p>
                 </div>
                 <!-- End text-left -->
                 <div class="text-right">
@@ -102,8 +107,8 @@ $url_ar =  pll_home_url('ar');
                                             </div>
 
                                             <ul>
-                                                <li><a href="/my-account/" title="Account Infomation"><?php _e('Account Infomation','casaDoro');?> </a></li>
-                                                <li><a href="<?php //wp_logout(); ?>" title="Logout"><?php _e('Logout','casaDoro');?></a></li>
+                                                <li><a href="/my-account/" title="<?php _e('Account Infomation','casaDoro');?> "><?php _e('Account Infomation','casaDoro');?> </a></li>
+                                                <li><a href="<?php echo wp_logout_url( get_permalink() ); ?>"><?php _e('Logout','casaDoro');?> </a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -144,10 +149,18 @@ $url_ar =  pll_home_url('ar');
                                 <li>
                                     <div class="container-fluid">
                                         <div class="header-account">
-                                            <ul>
+                                            <?php
+                        $menuMain = array(
+                          'menu'            => 'Language switcher',
+                          'items_wrap'      => ' <ul class="">%3$s</ul>',
+                        );
+                        wp_nav_menu( $menuMain );
+                    ?>
+
+                                          <!--   <ul>
                                                  <li><a href="<?php echo $url_en ?>" title="English" class="<?php echo (pll_current_language()=='en') ? 'active':'' ?>">English</a></li>
-                                       <li><a href="<?php echo $url_ar ?>" title="Arabic" class="<?php echo (pll_current_language()=='ar') ? 'active':'' ?>">Arabic</a></li>
-                                            </ul>
+                                                <li><a href="<?php echo $url_ar ?>" title="Arabic" class="<?php echo (pll_current_language()=='ar') ? 'active':'' ?>">Arabic</a></li>
+                                            </ul> -->
                                         </div>
                                     </div>
                                 </li>
@@ -169,7 +182,7 @@ $url_ar =  pll_home_url('ar');
                         <?php echo do_shortcode( '[wpmenucart]' );?>
                         <div class="search-form open" id="search-form">
                        <form action="./home.html" method="GET">
-                                    <input type="text" name="s" class="form-control" placeholder="Search your entry here...">
+                                    <input type="text" name="s" class="form-control" placeholder="<?php _e('Search your entry here...','casaDoro');?>">
                                     <span class="icon icon-search"></span>
                                 </form>
                             </div><!-- /.menubar-search-form -->

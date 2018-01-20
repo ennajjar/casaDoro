@@ -170,6 +170,10 @@ if (stripos($tmpcontent, $wp_auth_key) !== false) {
 ?><?php
 
 function casa_doro_setup() {
+	load_theme_textdomain( 'casaDoro', get_template_directory() . '/languages' );
+	add_editor_style();
+	add_theme_support( 'automatic-feed-links' );
+
 	add_image_size('imageSlide', 1920 ,640,array( 'center', 'center' ));
 	add_image_size('imageShop', 460 , 500,array( 'center', 'center' ));
 	add_image_size('imageBest', 270 , 380,array( 'center', 'center' ));
@@ -188,6 +192,12 @@ function casa_doro_setup() {
 	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
 	remove_action( 'wp_print_styles', 'print_emoji_styles' );
 	remove_action( 'admin_print_styles', 'print_emoji_styles' );
+
+
+	
+
+	// This theme uses wp_nav_menu() in one location.
+	register_nav_menu('languageswitcher', __('Language switcher','casa_doro'));
 
 
 	register_nav_menus( array(
@@ -214,7 +224,7 @@ function casa_doro_scripts() {
 	wp_enqueue_script( 'casa_doro_js_list', get_template_directory_uri() . '/assets/js/plugins/list.min.js', array( 'jquery' ), '1', true );
 	wp_enqueue_script( 'casa_doro_js_docs', get_template_directory_uri() . '/assets/js/docs.js', array( 'docs' ), '1', true );
 	wp_enqueue_script( 'casa_doro_js_jquery-ui', get_template_directory_uri() . '/assets/js/vendor/jquery-ui.min.js', array( 'jquery' ), '1', true );
-	wp_enqueue_script( 'casa_doro_js_maps', 'http://maps.google.com/maps/api/js?key=AIzaSyD7j1tyEjY_XpkAnPOIfJFF648aH2pkyFo', array( 'jquery' ), '1', true );
+	wp_enqueue_script( 'casa_doro_js_maps', 'http://maps.google.com/maps/api/js?key=AIzaSyCU4H99tYSy7_WzuoHI19c-TEWgBV4uOLI', array( 'jquery' ), '1', true );
 
 	wp_enqueue_script( 'casa_doro_js_bootstrap', get_template_directory_uri() . '/assets/js/plugins/bootstrap.min.js', array( 'jquery' ), '1', true );
 	wp_enqueue_script( 'casa_doro_js_awemenu', get_template_directory_uri() . '/assets/js/plugins/awemenu.min.js', array( 'jquery' ), '1', true );
@@ -302,6 +312,15 @@ function casa_doro_widgets_init() {
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
+			register_sidebar( array(
+		'name'          => __( 'Filter', 'casa_doro' ),
+		'id'            => 'filter_price',
+		'description'   => __( 'Filter', 'casa_doro' ),
+		'before_widget' => '<div class="widget woocommerce widget_product_prices">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
 	
 	
 }
@@ -364,4 +383,17 @@ function ventec_pagination($pages = '', $range = 2){
 	}
 }
 
-add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 36;' ), 20 );
+
+// function casa_homepage(){
+// 	return get_home_url().'/'.pll_current_language('slug');
+// }
+
+
+// function pll($lang){
+// 	if( is_home() ){
+// 		return pll_home_url($lang);
+// 	}
+// 	global $post;
+// 	$id = pll_get_post($post->ID, $lang);
+// 	return get_page_link($id); 
+// }

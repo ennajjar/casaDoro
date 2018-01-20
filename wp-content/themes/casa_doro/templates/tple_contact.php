@@ -65,8 +65,12 @@
                                 <div class="form-button">
                                     <button type="submit" class="btn btn-lg btn-dark">Send Message</button>
                                 </div><!-- /.form-button -->
-                            </form>*/?>
-                            <?php  echo do_shortcode( '[formidable id=2]' );?>
+                            </form>*/
+                             //echo do_shortcode( '[formidable id=2]' );?>
+                                <?php //echo do_shortcode( '[formidable id=10]' )?>
+
+              <?php if(pll_current_language()=='en'){ echo do_shortcode( '[formidable id=2]' );}?>
+              <?php if(pll_current_language()=='ar'){ echo do_shortcode( '[formidable id=10]' );}?>
                         </div>
                     </div><!-- /.col-md-6 -->
                 </div><!-- /.row -->

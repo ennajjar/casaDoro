@@ -11,7 +11,8 @@ $url_ar = "#";
             <li><a title="Casa D'Oro - Instagram" target="_blank" href="https://www.instagram.com/casa_doro/"><i class="icon fa fa-instagram"></i></a></li>
         </ul>
         <div class="content-nlt">
-              <?php echo do_shortcode( '[formidable id=7]' );?>
+              <?php if(pll_current_language()=='en'){ echo do_shortcode( '[formidable id=7]' );}?>
+              <?php if(pll_current_language()=='ar'){ echo do_shortcode( '[formidable id=10]' );}?>
         </div>
     </div>
     <!-- End container -->
@@ -45,7 +46,7 @@ $url_ar = "#";
                             </div>
                         </div>
                         <div class="widget">
-                            <h3 class="widget-title">PAYMENT ACCEPT</h3>
+                            <h3 class="widget-title"><?php _e('PAYMENT ACCEPT','casaDoro');?></h3>
                             <div class="widget-content">
                                 <a href="#" title="payment"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/img/footer-pay.png" alt="payment"></a>
                             </div>

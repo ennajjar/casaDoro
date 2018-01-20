@@ -16,4 +16,7 @@
  * @version     2.0.0
  */
 ?>
-</ul>
+</ul></div>
+<div class="col-md-3 col-md-pull-9 widget_product_prices"> <?php dynamic_sidebar( 'filter_price' ); ?></div>
+</div>
+</div>
